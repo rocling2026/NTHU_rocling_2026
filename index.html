@@ -21,7 +21,17 @@
     <div class="topbar-inner nav-wrap">
       <a href="#top" class="site-title">Rocling 2026</a>
 
-      <nav class="site-nav">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        ☰
+      </button>
+
+      <nav class="site-nav" id="site-nav">
         <a href="#top" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#dates">Important Dates</a>
@@ -290,5 +300,25 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".site-nav");
+
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        const expanded = nav.classList.contains("open");
+        toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
 </body>
 </html>
