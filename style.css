@@ -120,6 +120,17 @@ p {
   white-space: nowrap;
 }
 
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -425,9 +436,10 @@ p {
   }
 
   .nav-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.6rem;
   }
 
   .site-title {
@@ -436,17 +448,26 @@ p {
     line-height: 1.2;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+
   .site-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.45rem 0.7rem;
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
     width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .site-nav.open {
+    display: flex;
   }
 
   .site-nav a {
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     padding-bottom: 0.2rem;
     border-bottom-width: 2px;
   }
