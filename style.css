@@ -614,3 +614,18 @@ p {
     font-size: 1rem;
   }
 }
+
+.download-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+  background: var(--brand-dark);
+}
