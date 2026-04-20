@@ -507,3 +507,110 @@ p {
     font-size: 0.9rem;
   }
 }
+/* =============================
+   SUBMISSION TRACKS STYLING
+============================= */
+
+.tracks-paper {
+  color: #222;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.45;
+  font-size: 1rem;
+}
+
+.tracks-paper p {
+  margin: 0 0 1.4rem;
+}
+
+.tracks-linklike {
+  text-decoration: underline;
+  text-decoration-color: #c40000;
+  text-underline-offset: 2px;
+}
+
+.tracks-list {
+  margin: 0 0 1.6rem 1.5rem;
+  padding-left: 1rem;
+}
+
+.tracks-list li {
+  margin-bottom: 1.8rem;
+  padding-left: 0.2rem;
+}
+
+.tracks-list li::marker {
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.tracks-list strong {
+  font-weight: 700;
+}
+
+/* =============================
+   TOPICS DOUBLE TABLE
+============================= */
+
+.topics-table-wrap {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.topics-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #222;
+  border: 1px solid #555;
+}
+
+.topics-table th,
+.topics-table td {
+  border: 1px solid #555;
+}
+
+.topics-table th {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.7rem 0.9rem;
+  background: #f8f8f8;
+}
+
+.topics-table tbody td {
+  vertical-align: top;
+  padding: 0.55rem 0.9rem 0.8rem;
+}
+
+.topics-table td > ul {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.topics-table td > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.3rem;
+}
+
+.topics-table td > *:first-child {
+  margin-top: 0;
+}
+
+.topics-table li {
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 680px) {
+  .tracks-paper,
+  .topics-table {
+    font-size: 0.95rem;
+  }
+
+  .topics-table th {
+    font-size: 1rem;
+  }
+}
