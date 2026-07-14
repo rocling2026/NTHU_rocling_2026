@@ -640,3 +640,44 @@ p {
 .download-btn:hover {
   background: var(--brand-dark);
 }
+
+/* =============================
+   SPONSORS
+============================= */
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sponsor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 180px;
+}
+
+.sponsor-card img {
+  max-height: 100px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 680px) {
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-card {
+    min-height: 140px;
+    padding: 1.5rem;
+  }
+
+  .sponsor-card img {
+    max-height: 72px;
+  }
+}
